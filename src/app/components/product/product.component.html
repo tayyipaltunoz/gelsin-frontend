@@ -6,18 +6,17 @@
   <span class="visually-hidden"></span>
 </div>
 
-<table class="table">
-  <tr *ngFor="let product of products">
-    <div class="container"></div>
-    <div class="card-body" style="width: 18rem">
-      <img src="{{ product.image }}" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{{ product.title }}</h5>
-        <p class="card-text">{{ product.description }}</p>
-        <p class="card-text">Kategori : {{ product.category }}</p>
-        <p class="card-text">Fiyat : {{ product.price }}</p>
-        <a href="#" class="btn btn-primary">Sepete Ekle</a>
-      </div>
+<tr *ngFor="let product of products">
+  <div class="container"></div>
+
+  <div class="card-body" style="width: 12rem">
+    <img src="{{ product.image }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <!-- <small class="card-text">{{ product.description }}</small> -->
+      <p class="card-text">Kategori : {{ product.category }}</p>
+      <p class="card-text">Fiyat : {{ product.price }}</p>
+      <a href="#" class="btn btn-primary">Sepete Ekle</a>
     </div>
-  </tr>
-</table>
+  </div>
+</tr>
