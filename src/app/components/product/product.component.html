@@ -1,5 +1,5 @@
 <div
-  *ngIf="dataLoaded==false"
+  *ngIf="dataLoaded == false"
   class="spinner-border text-primary"
   role="status"
 >
@@ -7,21 +7,17 @@
 </div>
 
 <table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Ürün Adı</th>
-      <th>Kategori</th>
-      <th>Fiyat</th>
-      <th>Açıklama</th>
-    </tr>
-  </thead>
   <tr *ngFor="let product of products">
-    <td>{{ product.id }}</td>
-    <td>{{ product.title }}</td>
-    <td>{{ product.category }}</td>
-    <td>{{ product.price }}</td>
-    <td>{{ product.description }}</td>
-    <td>{{ product.image}}</td>
+    <div class="container"></div>
+    <div class="card-body" style="width: 18rem">
+      <img src="{{ product.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">Kategori : {{ product.category }}</p>
+        <p class="card-text">Fiyat : {{ product.price }}</p>
+        <a href="#" class="btn btn-primary">Sepete Ekle</a>
+      </div>
+    </div>
   </tr>
 </table>
