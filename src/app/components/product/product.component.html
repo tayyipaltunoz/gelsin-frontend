@@ -1,1 +1,27 @@
-<p>product works!</p>
+<div
+  *ngIf="dataLoaded==false"
+  class="spinner-border text-primary"
+  role="status"
+>
+  <span class="visually-hidden"></span>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Ürün Adı</th>
+      <th>Kategori</th>
+      <th>Fiyat</th>
+      <th>Açıklama</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let product of products">
+    <td>{{ product.id }}</td>
+    <td>{{ product.title }}</td>
+    <td>{{ product.category }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.image}}</td>
+  </tr>
+</table>
